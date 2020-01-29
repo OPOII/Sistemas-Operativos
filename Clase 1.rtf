@@ -1,0 +1,712 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang3082{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Lucida Console;}{\f2\fnil\fcharset0 Lucida Console;}}
+{\colortbl ;\red245\green245\blue245;\red0\green0\blue255;\red255\green148\blue148;}
+{\*\generator Riched20 10.0.17763}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang10\par
+1   Verifique si existen cmdlets que permitan convertir la salida de otro cmdlet a formato HTML.\par
+R// Si existe el comando y se llama ConvertTo-Html\par
+\f1  \cf1\fs18\par
+\cf0 NOMBRE\par
+    ConvertTo-Html\par
+    \par
+SINOPSIS\par
+    Converts Microsoft .NET Framework objects into HTML that can be displayed in a Web browser.\par
+    \par
+    \par
+SINTAXIS\par
+    ConvertTo-Html [[-Property] <Object[]>] [[-Head] <String[]>] [[-Title] <String>] [[-Body] <String[]>] \par
+    [-As \{Table | List\}] [-CssUri <Uri>] [-InputObject <PSObject>] [-PostContent <String[]>] [-PreContent \par
+    <String[]>] [<CommonParameters>]\par
+    \par
+    ConvertTo-Html [[-Property] <Object[]>] [-As \{Table | List\}] [-Fragment] [-InputObject <PSObject>] \par
+    [-PostContent <String[]>] [-PreContent <String[]>] [<CommonParameters>]\par
+    \par
+    \par
+DESCRIPCI\f2\'d3N\par
+    The ConvertTo-Html cmdlet converts .NET Framework objects into HTML that can be displayed in a Web \par
+    browser. You can use this cmdlet to display the output of a command in a Web page.\par
+    \par
+    You can use the parameters of ConvertTo-Html to select object properties, to specify a table or list \par
+    format, to specify the HTML page title, to add text before and after the object, and to return only \par
+    the table or list fragment, instead of a strict DTD page.\par
+    \par
+    When you submit multiple objects to ConvertTo-Html , Windows PowerShell creates the table (or list) \par
+    based on the properties of the first object that you submit. If the remaining objects do not have one \par
+    of the specified properties, the property value of that object is an empty cell. If the remaining \par
+    objects have additional properties, those property values are not included in the file.\par
+    \par
+\par
+V\'cdNCULOS RELACIONADOS\par
+    Online Version: {{\field{\*\fldinst{HYPERLINK http://go.microsoft.com/fwlink/?LinkId=821758 }}{\fldrslt{http://go.microsoft.com/fwlink/?LinkId=821758\ul0\cf0}}}}\f2\fs18\par
+    ConvertTo-Csv \par
+    ConvertTo-Json \par
+    ConvertTo-Xml \par
+    Export-Clixml \par
+    Import-Clixml \par
+\par
+NOTAS\par
+    Para ver los ejemplos, escriba: "get-help ConvertTo-Html -examples".\par
+    Para obtener m\'e1s informaci\'f3n, escriba: "get-help ConvertTo-Html -detailed".\par
+    Para obtener informaci\'f3n t\'e9cnica, escriba: "get-help ConvertTo-Html -full".\par
+    Para obtener ayuda disponible en l\'ednea, escriba: "get-help ConvertTo-Html -online"\par
+ \par
+\f0\fs22\par
+  2  Verifique cu\'e1les cmdlets permiten dirigir la salida hacia una impresora, o hacia un archivo.\par
+R// Si existe, se llama Out-Printer\par
+\f1  \fs18 PS C:\\Windows\\system32> help Out-Printer\par
+\par
+NOMBRE\par
+    Out-Printer\par
+    \par
+SINOPSIS\par
+    Sends output to a printer.\par
+    \par
+    \par
+SINTAXIS\par
+    Out-Printer [[-Name] <String>] [-InputObject <PSObject>] [<CommonParameters>]\par
+    \par
+    \par
+DESCRIPCI\f2\'d3N\par
+    The Out-Printer cmdlet sends output to the default printer or to an alternate printer, if one is specified.\par
+    \par
+\par
+V\'cdNCULOS RELACIONADOS\par
+    Online Version: {{\field{\*\fldinst{HYPERLINK http://go.microsoft.com/fwlink/?LinkId=821841 }}{\fldrslt{http://go.microsoft.com/fwlink/?LinkId=821841\ul0\cf0}}}}\f2\fs18\par
+    Out-File \par
+    Out-String \par
+\par
+NOTAS\par
+    Para ver los ejemplos, escriba: "get-help Out-Printer -examples".\par
+    Para obtener m\'e1s informaci\'f3n, escriba: "get-help Out-Printer -detailed".\par
+    Para obtener informaci\'f3n t\'e9cnica, escriba: "get-help Out-Printer -full".\par
+    Para obtener ayuda disponible en l\'ednea, escriba: "get-help Out-Printer -online"\par
+ \par
+\f0\fs22\par
+  3 Verifique cu\'e1ntos cmdlets sirven para gestionar procesos.\par
+R//\par
+\f1  \fs18 Name                              Category  Module                    Synopsis                                                                                          \par
+----                              --------  ------                    --------                                                                                          \par
+Enter-PSHostProcess               Cmdlet    Microsoft.PowerShell.Core Connects to and enters into an interactive session with a local process.                          \par
+Exit-PSHostProcess                Cmdlet    Microsoft.PowerShell.Core Closes an interactive session with a local process.                                               \par
+Get-PSHostProcessInfo             Cmdlet    Microsoft.PowerShell.Core                                                                                                   \par
+Debug-Process                     Cmdlet    Microsoft.PowerShell.M... Debugs one or more processes running on the local computer.                                       \par
+Get-Process                       Cmdlet    Microsoft.PowerShell.M... Gets the processes that are running on the local computer or a remote computer.                   \par
+Start-Process                     Cmdlet    Microsoft.PowerShell.M... Starts one or more processes on the local computer.                                               \par
+Stop-Process                      Cmdlet    Microsoft.PowerShell.M... Stops one or more running processes.                                                              \par
+Wait-Process                      Cmdlet    Microsoft.PowerShell.M... Waits for the processes to be stopped before accepting more input.                                \par
+Get-AppvVirtualProcess            Function  AppvClient                ...                                                                                               \par
+Start-AppvVirtualProcess          Function  AppvClient                ...                                                                                               \par
+ConvertTo-ProcessMitigationPolicy Cmdlet    ProcessMitigations        ConvertTo-ProcessMitigationPolicy...                                                              \par
+Get-ProcessMitigation             Cmdlet    ProcessMitigations        Get-ProcessMitigation...                                                                          \par
+Set-ProcessMitigation             Cmdlet    ProcessMitigations        Set-ProcessMitigation...                                                                          \par
+ \par
+\f0\fs22\par
+  4  Cu\'e1l cmdlet podr\'eda usarse para escribir una entrada en un log de eventos?\par
+si, es help log, mas especificamente el new eventlog\par
+\f1  \fs18 Name                              Category  Module                    Synopsis                                                                                          \par
+----                              --------  ------                    --------                                                                                          \par
+Clear-EventLog                    Cmdlet    Microsoft.PowerShell.M... Clears all entries from specified event logs on the local or remote computers.                    \par
+Get-EventLog                      Cmdlet    Microsoft.PowerShell.M... Gets the events in an event log, or a list of the event logs, on the local or remote computers.   \par
+Limit-EventLog                    Cmdlet    Microsoft.PowerShell.M... Sets the event log properties that limit the size of the event log and the age of its entries.    \par
+New-EventLog                      Cmdlet    Microsoft.PowerShell.M... Creates a new event log and a new event source on a local or remote computer.                     \par
+Remove-EventLog                   Cmdlet    Microsoft.PowerShell.M... Deletes an event log or unregisters an event source.                                              \par
+Show-EventLog                     Cmdlet    Microsoft.PowerShell.M... Displays the event logs of the local or a remote computer in Event Viewer.                        \par
+Write-EventLog                    Cmdlet    Microsoft.PowerShell.M... Writes an event to an event log.                                                                  \par
+Enable-AppBackgroundTaskDiagno... Cmdlet    AppBackgroundTask         Enable-AppBackgroundTaskDiagnosticLog...                                                          \par
+Disable-AppBackgroundTaskDiagn... Cmdlet    AppBackgroundTask         Disable-AppBackgroundTaskDiagnosticLog...                                                         \par
+Get-AppxLog                       Function  Appx                      ...                                                                                               \par
+Export-BinaryMiLog                Cmdlet    CimCmdlets                Export-BinaryMiLog...                                                                             \par
+Import-BinaryMiLog                Cmdlet    CimCmdlets                Import-BinaryMiLog...                                                                             \par
+Get-MpThreatCatalog               Function  Defender                  ...                                                                                               \par
+Get-DeliveryOptimizationLog       Cmdlet    DeliveryOptimization      Get-DeliveryOptimizationLog...                                                                    \par
+Start-AutologgerConfig            Function  EventTracingManagement    ...                                                                                               \par
+Remove-AutologgerConfig           Function  EventTracingManagement    ...                                                                                               \par
+Get-AutologgerConfig              Function  EventTracingManagement    ...                                                                                               \par
+Update-AutologgerConfig           Function  EventTracingManagement    ...                                                                                               \par
+New-AutologgerConfig              Function  EventTracingManagement    ...                                                                                               \par
+Test-FileCatalog                  Cmdlet    Microsoft.PowerShell.S... Test-FileCatalog...                                                                               \par
+New-FileCatalog                   Cmdlet    Microsoft.PowerShell.S... New-FileCatalog...                                                                                \par
+Set-DtcLog                        Function  MsDtc                     ...                                                                                               \par
+Get-DtcLog                        Function  MsDtc                     ...                                                                                               \par
+Reset-DtcLog                      Function  MsDtc                     ...                                                                                               \par
+Get-PcsvDeviceLog                 Function  PcsvDevice                ...                                                                                               \par
+Clear-PcsvDeviceLog               Function  PcsvDevice                ...                                                                                               \par
+Get-LogProperties                 Function  PSDiagnostics             ...                                                                                               \par
+Set-LogProperties                 Function  PSDiagnostics             ...                                                                                               \par
+Stop-StorageDiagnosticLog         Function  Storage                   ...                                                                                               \par
+Start-StorageDiagnosticLog        Function  Storage                   ...                                                                                               \par
+Get-WindowsUpdateLog              Function  WindowsUpdate             ...                                                                                               \par
+about_Eventlogs                   HelpFile                            Windows PowerShell creates a Windows event log that is                                            \par
+about_Logical_Operators           HelpFile                            Describes the operators that connect statements in Windows PowerShell.                            \par
+ \par
+\f0\fs22\par
+  5  Cu\'e1les cmdlets pueden emplearse para gestionar alias?\par
+\f1  \fs18 PS C:\\Windows\\system32> help alias\par
+\par
+NOMBRE DEL PROVEEDOR\par
+    Alias\par
+    \par
+UNIDADES\par
+    Alias:\par
+    \par
+SINOPSIS\par
+    Provides access to the Windows PowerShell aliases and the values that they represent.\par
+    \par
+DESCRIPCI\f2\'d3N\par
+    The Windows PowerShell Alias provider lets you get, add, change, clear, and delete aliases in Windows PowerShell. \par
+    \par
+    An alias is an alternate name for a cmdlet, function, or executable file. Windows PowerShell includes a set of built-in aliases. And, you can add your own aliases \par
+    to the current session and to your Windows PowerShell profile.\par
+    \par
+    The Alias provider is a flat namespace that contains only the alias objects. The aliases have no child items.\par
+    \par
+    Each alias is an instance of the System.Management.Automation.AliasInfo class.\par
+    \par
+    The Alias provider exposes its data store in the Alias: drive. To work with aliases, you can change your location to the Alias: drive by using the following \par
+    command:\par
+    \par
+        set-location alias:\par
+    \par
+    Or, you can work from any other Windows PowerShell drive. To reference an alias from another location, use the Alias: drive name in the path. \par
+    \par
+    Windows PowerShell includes a set of cmdlets that are designed to view and to change aliases:\par
+    \par
+        Export-Alias\par
+        Get-Alias\par
+        Import-Alias\par
+        New-Alias\par
+        Set-Alias\par
+    \par
+    When you use these cmdlets, you do not need to specify the Alias: drive in the name.\par
+    \par
+    The Alias provider supports all the cmdlets that have the Item noun except for the Invoke-Item cmdlet. And, it supports the Get-Content and Set-Content cmdlets. \par
+    The Alias provider does not support the cmdlets that have the ItemProperty noun. And, the Alias provider does not support the Filter parameter in any cmdlet.\par
+    \par
+    All changes to the aliases affect the current session only. To save the changes, add the changes to the Windows PowerShell profile. Or, use the Export-Alias and \par
+    Import-Alias cmdlets. \par
+\f0\fs22\par
+  6  Hay alguna manera de llevar un registro (transcript) de una sesi\'f3n de Powershell, y de grabar dicho registro en un archivo?\par
+R// es get-help Start-Transcript\par
+  7 C\'f3mo se pueden obtener los 100 registros m\'e1s recientes del log de eventos SECURITY del sistema?\par
+\f1  \fs18 PS C:\\Windows\\system32> Get-EventLog -LogName Security -Newest 100\par
+\par
+   Index Time          EntryType   Source                 InstanceID Message                                                                                            \par
+   ----- ----          ---------   ------                 ---------- -------                                                                                            \par
+    8865 ene. 29 10:24 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\f2\'f3n....                                \par
+    8864 ene. 29 10:24 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8863 ene. 29 10:24 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8862 ene. 29 10:24 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8861 ene. 29 10:15 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8860 ene. 29 10:15 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8859 ene. 29 10:05 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8858 ene. 29 10:05 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8857 ene. 29 09:59 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8856 ene. 29 09:59 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8855 ene. 29 09:59 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8854 ene. 29 09:59 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8853 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8852 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8851 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8850 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8849 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8848 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8847 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8846 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8845 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8844 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8843 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8842 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8841 ene. 29 09:57 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8840 ene. 29 09:57 SuccessA... Microsoft-Windows...         4798 Se enumer\'f3 la pertenencia a grupos locales de un usuario....                                       \par
+    8839 ene. 29 09:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8838 ene. 29 09:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8837 ene. 29 09:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8836 ene. 29 09:55 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8835 ene. 29 09:55 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8834 ene. 29 09:55 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8833 ene. 29 09:55 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8832 ene. 29 09:55 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8831 ene. 29 09:55 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8830 ene. 29 09:54 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8829 ene. 29 09:54 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8828 ene. 29 09:54 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8827 ene. 29 09:54 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8826 ene. 29 09:54 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8825 ene. 29 09:54 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8824 ene. 29 09:53 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8823 ene. 29 09:53 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8822 ene. 29 09:53 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8821 ene. 29 09:53 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8820 ene. 29 09:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8819 ene. 29 09:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8818 ene. 29 09:52 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8817 ene. 29 09:52 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8816 ene. 29 09:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8815 ene. 29 09:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8814 ene. 29 09:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8813 ene. 29 09:52 SuccessA... Microsoft-Windows...         5059 Operaci\'f3n de migraci\'f3n de claves....                                                               \par
+    8812 ene. 29 09:52 SuccessA... Microsoft-Windows...         5061 Operaci\'f3n criptogr\'e1fica....                                                                        \par
+    8811 ene. 29 09:52 SuccessA... Microsoft-Windows...         5058 Operaci\'f3n de archivo de clave....                                                                  \par
+    8810 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8809 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8808 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8807 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8806 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8805 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8804 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8803 ene. 29 09:51 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8802 ene. 29 09:51 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8801 ene. 29 09:51 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8800 ene. 29 09:51 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8799 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8798 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8797 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8796 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8795 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8794 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8793 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8792 ene. 29 09:51 SuccessA... Microsoft-Windows...         5061 Operaci\'f3n criptogr\'e1fica....                                                                        \par
+    8791 ene. 29 09:51 SuccessA... Microsoft-Windows...         5058 Operaci\'f3n de archivo de clave....                                                                  \par
+    8790 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8789 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8788 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8787 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8786 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8785 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8784 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8783 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8782 ene. 29 09:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....                                  \par
+    8781 ene. 29 09:51 SuccessA... Microsoft-Windows...         4798 Se enumer\'f3 la pertenencia a grupos locales de un usuario....                                       \par
+    8780 ene. 29 09:50 SuccessA... Microsoft-Windows...         4799 Se enumer\'f3 la pertenencia a grupos locales con seguridad habilitada....                            \par
+    8779 ene. 29 09:50 SuccessA... Microsoft-Windows...         4799 Se enumer\'f3 la pertenencia a grupos locales con seguridad habilitada....                            \par
+    8778 ene. 29 09:50 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8777 ene. 29 09:50 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8776 ene. 29 09:50 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8775 ene. 29 09:50 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+    8774 ene. 29 09:50 SuccessA... Microsoft-Windows...         4798 Se enumer\'f3 la pertenencia a grupos locales de un usuario....                                       \par
+    8773 ene. 29 09:50 SuccessA... Microsoft-Windows...         4798 Se enumer\'f3 la pertenencia a grupos locales de un usuario....                                       \par
+    8772 ene. 29 09:50 SuccessA... Microsoft-Windows...         4798 Se enumer\'f3 la pertenencia a grupos locales de un usuario....                                       \par
+    8771 ene. 29 09:50 SuccessA... Microsoft-Windows...         5059 Operaci\'f3n de migraci\'f3n de claves....                                                               \par
+    8770 ene. 29 09:50 SuccessA... Microsoft-Windows...         5061 Operaci\'f3n criptogr\'e1fica....                                                                        \par
+    8769 ene. 29 09:50 SuccessA... Microsoft-Windows...         5058 Operaci\'f3n de archivo de clave....                                                                  \par
+    8768 ene. 29 09:50 SuccessA... Microsoft-Windows...         4799 Se enumer\'f3 la pertenencia a grupos locales con seguridad habilitada....                            \par
+    8767 ene. 29 09:50 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi\'f3n....                                \par
+    8766 ene. 29 09:50 SuccessA... Microsoft-Windows...         4624 Se inici\'f3 sesi\'f3n correctamente en una cuenta....                                                   \par
+ \f0\fs22\par
+  8  Existe alguna manera de obtener la lista de los servicios que se est\'e1n ejecutando en un computador remoto?\par
+\f1  \fs18 Status   Name               DisplayName                           \par
+------   ----               -----------                           \par
+Stopped  AJRouter           Servicio de enrutador de AllJoyn      \par
+Stopped  ALG                Servicio de puerta de enlace de niv...\par
+Stopped  AppIDSvc           Identidad de aplicaci\f2\'f3n               \par
+Running  Appinfo            Informaci\'f3n de la aplicaci\'f3n          \par
+Stopped  AppMgmt            Administraci\'f3n de aplicaciones        \par
+Stopped  AppReadiness       Preparaci\'f3n de aplicaciones           \par
+Stopped  AppVClient         Microsoft App-V Client                \par
+Stopped  AppXSvc            Servicio de implementaci\'f3n de AppX ...\par
+Stopped  AssignedAccessM... Servicio AssignedAccessManager        \par
+Running  AudioEndpointBu... Compilador de extremo de audio de W...\par
+Running  Audiosrv           Audio de Windows                      \par
+Stopped  AxInstSV           Instalador de ActiveX (AxInstSV)      \par
+Stopped  BcastDVRUserSer... Servicio de usuario de difusi\'f3n y G...\par
+Stopped  BDESVC             Servicio Cifrado de unidad BitLocker  \par
+Running  BFE                Motor de filtrado de base             \par
+Stopped  BITS               Servicio de transferencia inteligen...\par
+Stopped  BluetoothUserSe... Servicio de soporte t\'e9cnico de usua...\par
+Running  BrokerInfrastru... Servicio de infraestructura de tare...\par
+Stopped  BTAGService        Servicio de puerta de enlace de aud...\par
+Running  BthAvctpSvc        Servicio AVCTP                        \par
+Stopped  bthserv            Servicio de compatibilidad con Blue...\par
+Stopped  camsvc             Servicio Administrador de funcional...\par
+Stopped  CaptureService_... CaptureService_7efa0                  \par
+Running  cbdhsvc_7efa0      Servicio de usuario del portapapele...\par
+Running  CDPSvc             Servicio de plataforma de dispositi...\par
+Running  CDPUserSvc_7efa0   Servicio de usuario de plataforma d...\par
+Stopped  CertPropSvc        Propagaci\'f3n de certificados           \par
+Running  ClipSVC            Servicio de licencia de cliente (Cl...\par
+Running  COMSysApp          Aplicaci\'f3n del sistema COM+           \par
+Stopped  ConsentUxUserSv... ConsentUX_7efa0                       \par
+Running  CoreMessagingRe... CoreMessaging                         \par
+Running  CryptSvc           Servicios de cifrado                  \par
+Stopped  CscService         Archivos sin conexi\'f3n                 \par
+Running  DcomLaunch         Iniciador de procesos de servidor DCOM\par
+Stopped  defragsvc          Optimizar unidades                    \par
+Stopped  DeviceAssociati... Servicio de asociaci\'f3n de dispositivos\par
+Stopped  DeviceInstall      Servicio de instalaci\'f3n de disposit...\par
+Stopped  DevicePickerUse... DevicePicker_7efa0                    \par
+Stopped  DevicesFlowUser... DevicesFlow_7efa0                     \par
+Stopped  DevQueryBroker     Agente de detecci\'f3n en segundo plan...\par
+Running  Dhcp               Cliente DHCP                          \par
+Stopped  diagnosticshub.... Servicio Recopilador est\'e1ndar del c...\par
+Stopped  diagsvc            Diagnostic Execution Service          \par
+Running  DiagTrack          Telemetr\'eda y experiencias del usuar...\par
+Stopped  DisplayEnhancem... Servicio de mejora de visualizaci\'f3n   \par
+Stopped  DmEnrollmentSvc    Servicio de inscripci\'f3n de administ...\par
+Stopped  dmwappushservice   Servicio de enrutamiento de mensaje...\par
+Running  Dnscache           Cliente DNS                           \par
+Stopped  DoSvc              Optimizaci\'f3n de entrega               \par
+Stopped  dot3svc            Configuraci\'f3n autom\'e1tica de redes c...\par
+Running  DPS                Servicio de directivas de diagn\'f3stico \par
+Stopped  DsmSvc             Administrador de configuraci\'f3n de d...\par
+Running  DsSvc              Servicio de uso compartido de datos   \par
+Running  DusmSvc            Uso de datos                          \par
+Stopped  Eaphost            Protocolo de autenticaci\'f3n extensible \par
+Running  EFS                Sistema de cifrado de archivos (EFS)  \par
+Stopped  embeddedmode       Modo incrustado                       \par
+Stopped  EntAppSvc          Servicio de administraci\'f3n de aplic...\par
+Running  EventLog           Registro de eventos de Windows        \par
+Running  EventSystem        Sistema de eventos COM+               \par
+Stopped  Fax                Fax                                   \par
+Stopped  fdPHost            Host de proveedor de detecci\'f3n de f...\par
+Stopped  FDResPub           Publicaci\'f3n de recurso de detecci\'f3n...\par
+Stopped  fhsvc              Servicio de historial de archivos     \par
+Running  FontCache          Servicio de cach\'e9 de fuentes de Win...\par
+Stopped  FrameServer        Servicio FrameServer de la C\'e1mara d...\par
+Stopped  GoogleChromeEle... Google Chrome Elevation Service       \par
+Running  gpsvc              Cliente de directiva de grupo         \par
+Stopped  GraphicsPerfSvc    GraphicsPerfSvc                       \par
+Stopped  gupdate            Google Update Servicio (gupdate)      \par
+Stopped  gupdatem           Google Update Servicio (gupdatem)     \par
+Stopped  hidserv            Servicio de dispositivo de interfaz...\par
+Stopped  icssvc             Servicio de zona con cobertura inal...\par
+Stopped  IKEEXT             M\'f3dulos de creaci\'f3n de claves de IP...\par
+Stopped  InstallService     Servicio de instalaci\'f3n de Microsof...\par
+Running  iphlpsvc           Aplicaci\'f3n auxiliar IP                \par
+Stopped  IpxlatCfgSvc       Servicio de configuraci\'f3n de trasla...\par
+Stopped  irmon              Servicio de monitor de infrarrojos    \par
+Running  KeyIso             Aislamiento de claves CNG             \par
+Stopped  KtmRm              KTMRM para DTC (Coordinador de tran...\par
+Running  LanmanServer       Servidor                              \par
+Running  LanmanWorkstation  Estaci\'f3n de trabajo                   \par
+Stopped  lfsvc              Servicio de geolocalizaci\'f3n           \par
+Running  LicenseManager     Servicio de administrador de licenc...\par
+Stopped  lltdsvc            Asignador de detecci\'f3n de topolog\'eda...\par
+Running  lmhosts            Aplicaci\'f3n auxiliar de NetBIOS sobr...\par
+Running  LSM                Administrador de sesi\'f3n local         \par
+Stopped  LxpSvc             Servicio de experiencia de idioma     \par
+Stopped  MapsBroker         Administrador de mapas descargados    \par
+Stopped  MessagingServic... MessagingService_7efa0                \par
+Running  mpssvc             Firewall de Windows Defender          \par
+Running  MSDTC              Coordinador de transacciones distri...\par
+Stopped  MSiSCSI            Servicio del iniciador iSCSI de Mic...\par
+Stopped  msiserver          Windows Installer                     \par
+Stopped  NaturalAuthenti... Autenticaci\'f3n natural                 \par
+Stopped  NcaSvc             Asistente para la conectividad de red \par
+Running  NcbService         Agente de conexi\'f3n de red             \par
+Stopped  NcdAutoSetup       Configuraci\'f3n autom\'e1tica de disposi...\par
+Stopped  Netlogon           Net Logon                             \par
+Stopped  Netman             Conexiones de red                     \par
+Running  netprofm           Servicio de lista de redes            \par
+Stopped  NetSetupSvc        Servicio de configuraci\'f3n de red      \par
+Stopped  NetTcpPortSharing  Servicio de uso compartido de puert...\par
+Stopped  NgcCtnrSvc         Contenedor de Microsoft Passport      \par
+Stopped  NgcSvc             Microsoft Passport                    \par
+Running  NlaSvc             Reconoc. ubicaci\'f3n de red             \par
+Running  nsi                Servicio Interfaz de almacenamiento...\par
+Running  OneSyncSvc_7efa0   Sincronizar host_7efa0                \par
+Stopped  p2pimsvc           Administrador de identidad de redes...\par
+Stopped  p2psvc             Agrupaci\'f3n de red del mismo nivel     \par
+Running  PcaSvc             Servicio Asistente para la compatib...\par
+Stopped  PeerDistSvc        BranchCache                           \par
+Stopped  perceptionsimul... Servicio de simulaci\'f3n de percepci\'f3...\par
+Stopped  PhoneSvc           Servicio telef\'f3nico                   \par
+Stopped  PimIndexMainten... Datos de contactos_7efa0              \par
+Stopped  pla                Registros y alertas de rendimiento    \par
+Running  PlugPlay           Plug and Play                         \par
+Stopped  PNRPAutoReg        Servicio de publicaci\'f3n de nombres ...\par
+Stopped  PNRPsvc            Protocolo de resoluci\'f3n de nombres ...\par
+Stopped  PolicyAgent        Agente de directiva IPsec             \par
+Running  Power              Energ\'eda                               \par
+Stopped  PrintNotify        Extensiones y notificaciones de imp...\par
+Running  PrintWorkflowUs... PrintWorkflow_7efa0                   \par
+Running  ProfSvc            Servicio de perfil de usuario         \par
+Stopped  PushToInstall      Servicio PushToInstall de Windows     \par
+Stopped  QWAVE              Experiencia de calidad de audio y v...\par
+Stopped  RasAuto            Administrador de conexiones autom\'e1t...\par
+Running  RasMan             Administrador de conexiones de acce...\par
+Stopped  RemoteAccess       Enrutamiento y acceso remoto          \par
+Stopped  RemoteRegistry     Registro remoto                       \par
+Stopped  RetailDemo         Servicio de prueba comercial          \par
+Stopped  RmSvc              Servicio de administraci\'f3n de radio   \par
+Running  RpcEptMapper       Asignador de extremos de RPC          \par
+Stopped  RpcLocator         Ubicador de llamada a procedimiento...\par
+Running  RpcSs              Llamada a procedimiento remoto (RPC)  \par
+Running  SamSs              Administrador de cuentas de seguridad \par
+Stopped  SCardSvr           Tarjeta inteligente                   \par
+Stopped  ScDeviceEnum       Servicio de enumeraci\'f3n de disposit...\par
+Running  Schedule           Programador de tareas                 \par
+Stopped  SCPolicySvc        Directiva de extracci\'f3n de tarjetas...\par
+Stopped  SDRSVC             Copias de seguridad de Windows        \par
+Stopped  seclogon           Inicio de sesi\'f3n secundario           \par
+Running  SecurityHealthS... Servicio Seguridad de Windows         \par
+Running  SEMgrSvc           Administrador de pagos y NFC/SE       \par
+Running  SENS               Servicio de notificaci\'f3n de eventos...\par
+Stopped  Sense              Servicio de Protecci\'f3n contra amena...\par
+Stopped  SensorDataService  Servicio de datos del sensor          \par
+Stopped  SensorService      Servicio de sensores                  \par
+Stopped  SensrSvc           Servicio de supervisi\'f3n de sensores   \par
+Stopped  SessionEnv         Configuraci\'f3n de Escritorio remoto    \par
+Stopped  SharedAccess       Conexi\'f3n compartida a Internet (ICS)  \par
+Stopped  SharedRealitySvc   Servicio de datos espacial            \par
+Running  ShellHWDetection   Detecci\'f3n de hardware shell           \par
+Stopped  shpamsvc           Shared PC Account Manager             \par
+Stopped  smphost            SMP de Espacios de almacenamiento d...\par
+Running  SmsRouter          Servicio enrutador de SMS de Micros...\par
+Stopped  SNMPTRAP           Captura de SNMP                       \par
+Stopped  spectrum           Servicio de percepci\'f3n de Windows     \par
+Running  Spooler            Cola de impresi\'f3n                     \par
+Stopped  sppsvc             Protecci\'f3n de software                \par
+Running  SSDPSRV            Detecci\'f3n SSDP                        \par
+Stopped  ssh-agent          OpenSSH Authentication Agent          \par
+Running  SstpSvc            Servicio de protocolo de t\'fanel de s...\par
+Running  StateRepository    Servicio de repositorio de estado     \par
+Stopped  StiSvc             Adquisici\'f3n de im\'e1genes de Windows ...\par
+Running  StorSvc            Servicio de almacenamiento            \par
+Stopped  svsvc              Comprobador puntual                   \par
+Stopped  swprv              Proveedor de instant\'e1neas de softwa...\par
+Running  SysMain            SysMain                               \par
+Running  SystemEventsBroker Agente de eventos del sistema         \par
+Running  TabletInputService Servicio de Panel de escritura a ma...\par
+Stopped  tapisrv            Telefon\'eda                             \par
+Stopped  TermService        Servicios de Escritorio remoto        \par
+Running  Themes             Temas                                 \par
+Stopped  TieringEngineSe... Administraci\'f3n de capas de almacena...\par
+Running  TimeBrokerSvc      Agente de eventos de tiempo           \par
+Running  TokenBroker        Administrador de cuentas web          \par
+Running  TrkWks             Cliente de seguimiento de v\'ednculos ...\par
+Stopped  TrustedInstaller   Instalador de m\'f3dulos de Windows      \par
+Stopped  tzautoupdate       Actualizador de zona horaria autom\'e1...\par
+Stopped  UevAgentService    Servicio de virtualizaci\'f3n de la ex...\par
+Stopped  UmRdpService       Redirector de puerto en modo usuari...\par
+Stopped  UnistoreSvc_7efa0  Almacenamiento de datos de usuarios...\par
+Stopped  upnphost           Dispositivo host de UPnP              \par
+Stopped  UserDataSvc_7efa0  Acceso a datos de usuarios_7efa0      \par
+Running  UserManager        Administrador de usuarios             \par
+Running  UsoSvc             Update Orchestrator Service           \par
+Stopped  VacSvc             Servicio Volumetric Audio Compositor  \par
+Running  VaultSvc           Administrador de credenciales         \par
+Stopped  vds                Disco virtual                         \par
+Running  VGAuthService      VMware Alias Manager and Ticket Ser...\par
+Stopped  vmicguestinterface Interfaz de servicio invitado de Hy...\par
+Stopped  vmicheartbeat      Servicio de latido de Hyper-V         \par
+Stopped  vmickvpexchange    Servicio de intercambio de datos de...\par
+Stopped  vmicrdv            Servicio de virtualizaci\'f3n de Escri...\par
+Stopped  vmicshutdown       Servicio de cierre de invitado de H...\par
+Stopped  vmictimesync       Servicio de sincronizaci\'f3n de hora ...\par
+Stopped  vmicvmsession      Servicio PowerShell Direct de Hyper-V \par
+Stopped  vmicvss            Solicitante de instant\'e1neas de volu...\par
+Running  VMTools            VMware Tools                          \par
+Stopped  vmvss              VMware Snapshot Provider              \par
+Running  VMware Physical... Servicio auxiliar de disco f\'edsico d...\par
+Stopped  VSS                Instant\'e1neas de volumen               \par
+Stopped  W32Time            Hora de Windows                       \par
+Stopped  WaaSMedicSvc       Windows Update Medic Service          \par
+Stopped  WalletService      WalletService                         \par
+Running  WarpJITSvc         WarpJITSvc                            \par
+Stopped  wbengine           Servicio del m\'f3dulo de copia de seg...\par
+Stopped  WbioSrvc           Servicio biom\'e9trico de Windows        \par
+Running  Wcmsvc             Administrador de conexiones de Windows\par
+Stopped  wcncsvc            Registrador de configuraci\'f3n de Win...\par
+Running  WdiServiceHost     Host del servicio de diagn\'f3stico      \par
+Stopped  WdiSystemHost      Host de sistema de diagn\'f3stico        \par
+Running  WdNisSvc           Servicio de inspecci\'f3n de red de An...\par
+Stopped  WebClient          Cliente web                           \par
+Stopped  Wecsvc             Recopilador de eventos de Windows     \par
+Stopped  WEPHOSTSVC         Servicio host de proveedor de cifra...\par
+Stopped  wercplsupport      Ayuda del Panel de control de Infor...\par
+Stopped  WerSvc             Servicio Informe de errores de Windows\par
+Stopped  WFDSConMgrSvc      Servicio de administrador de conexi...\par
+Stopped  WiaRpc             Eventos de adquisici\'f3n de im\'e1genes ...\par
+Running  WinDefend          Servicio de Antivirus de Windows De...\par
+Running  WinHttpAutoProx... Servicio de detecci\'f3n autom\'e1tica de...\par
+Running  winmgmt            Instrumental de administraci\'f3n de W...\par
+Stopped  WinRM              Administraci\'f3n remota de Windows (W...\par
+Stopped  wisvc              Servicio de Windows Insider           \par
+Stopped  Wlansvc            Configuraci\'f3n autom\'e1tica de WLAN      \par
+Stopped  wlidsvc            Ayudante para el inicio de sesi\'f3n d...\par
+Stopped  wlpasvc            Servicio de asistente para perfil l...\par
+Stopped  WManSvc            Servicio de administraci\'f3n de Windows \par
+Stopped  wmiApSrv           Adaptador de rendimiento de WMI       \par
+Stopped  WMPNetworkSvc      Servicio de uso compartido de red d...\par
+Stopped  workfolderssvc     Carpetas de trabajo                   \par
+Stopped  WpcMonSvc          Control parental                      \par
+Stopped  WPDBusEnum         Servicio enumerador de dispositivos...\par
+Running  WpnService         Servicio del sistema de notificacio...\par
+Running  WpnUserService_... Servicio de usuario de notificacion...\par
+Running  wscsvc             Centro de seguridad                   \par
+Running  WSearch            Windows Search                        \par
+Running  wuauserv           Windows Update                        \par
+Stopped  WwanSvc            Configuraci\'f3n autom\'e1tica de WWAN      \par
+Stopped  XblAuthManager     Administraci\'f3n de autenticaci\'f3n de ...\par
+Stopped  XblGameSave        Partida guardada en Xbox Live         \par
+Stopped  XboxGipSvc         Xbox Accessory Management Service     \par
+Stopped  XboxNetApiSvc      XboxNetApiSvc               \par
+\f0\fs22\par
+get Service -ComputerName "PCremoto" para tener el poder de ver los procesos del pc remoto\par
+   9 Existe alguna manera de obtener la lista de procesos de un computador remoto?\par
+Get-Process -ComputerName "PC-remoto"\par
+  10  Revise la ayuda del cmdlet Out-File. Cu\'e1l es el tama\'f1o de l\'ednea que emplea este cmdlet por omisi\'f3n? Existe alg\'fan par\'e1metro que permita cambiar dicho tama\'f1o?\par
+\par
+\f1  \fs18\par
+PS C:\\Windows\\system32> help Out-File -Detailed\par
+\par
+NOMBRE\par
+    Out-File\par
+    \par
+SINOPSIS\par
+    Sends output to a file.\par
+    \par
+    \par
+SINTAXIS\par
+    Out-File [-FilePath] <String> [[-Encoding] \{unknown | string | unicode | bigendianunicode | utf8 | utf7 | utf32 | ascii | default | oem\}] [-Append] [-Confirm] \par
+    [-Force] [-InputObject <PSObject>] [-NoClobber] [-NoNewline] [-WhatIf] [-Width <Int32>] [<CommonParameters>]\par
+    \par
+    Out-File [[-Encoding] \{unknown | string | unicode | bigendianunicode | utf8 | utf7 | utf32 | ascii | default | oem\}] [-Append] [-Confirm] [-Force] [-InputObject \par
+    <PSObject>] -LiteralPath <String> [-NoClobber] [-NoNewline] [-WhatIf] [-Width <Int32>] [<CommonParameters>]\par
+    \par
+    \par
+DESCRIPCI\f2\'d3N\par
+    The Out-File cmdlet sends output to a file. You can use this cmdlet instead of the redirection operator (>) when you need to use its parameters.\par
+    \par
+\par
+PAR\'c1METROS\par
+    -Append [<SwitchParameter>]\par
+        Indicates that the cmdlet adds the output to the end of an existing file, instead of replacing the file contents.\par
+        \par
+    -Confirm [<SwitchParameter>]\par
+        Prompts you for confirmation before running the cmdlet.\par
+        \par
+    -Encoding <String>\par
+        Specifies the type of character encoding used in the file. The acceptable values for this parameter are:\par
+        \par
+        - Unknown\par
+        \par
+        - String\par
+        \par
+        - Unicode\par
+        \par
+        - BigEndianUnicode\par
+        \par
+        - UTF8\par
+        \par
+        - UTF7\par
+        \par
+        - UTF32\par
+        \par
+        - ASCII\par
+        \par
+        - Default\par
+        \par
+        - OEM\par
+        \par
+        \par
+        Unicode is the default.\par
+        \par
+        Default uses the encoding of the system's current ANSI code page.\par
+        OEM uses the current original equipment manufacturer code page identifier for the operating system.\par
+        \par
+        \par
+    -FilePath <String>\par
+        Specifies the path to the output file.\par
+        \par
+    -Force [<SwitchParameter>]\par
+        Indicates that the cmdlet overwrites an existing read-only file. Even using the Force parameter, the cmdlet cannot override security restrictions.\par
+        \par
+    -InputObject <PSObject>\par
+        Specifies the objects to be written to the file. Enter a variable that contains the objects or type a command or expression that gets the objects.\par
+        \par
+    -LiteralPath <String>\par
+        Specifies the path to the output file. Unlike FilePath , the value of the LiteralPath parameter is used exactly as it is typed. No characters are interpreted \par
+        as wildcards. If the path includes escape characters, enclose it in single quotation marks. Single quotation marks tell Windows PowerShell not to interpret any \par
+        characters as escape sequences.\par
+        \par
+    -NoClobber [<SwitchParameter>]\par
+        Indicates that the cmdlet will not overwrite an existing file. By default, if a file exists in the specified path, Out-File overwrites the file without \par
+        warning. If both Append and NoClobber are used, the output is appended to the existing file.\par
+        \par
+    -NoNewline [<SwitchParameter>]\par
+        @\{Text=\}\par
+        \par
+    -WhatIf [<SwitchParameter>]\par
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.\par
+        \par
+    -Width <Int32>\par
+        Specifies the number of characters in each line of output. Any additional characters are truncated, not wrapped. If you omit this parameter, the width is \par
+        determined by the characteristics of the host. The default for the Windows PowerShell console is 80 characters.\par
+        \par
+    <CommonParameters>\par
+        Este cmdlet admite los par\'e1metros comunes: Verbose, Debug,\par
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,\par
+        OutBuffer, PipelineVariable y OutVariable. Para obtener m\'e1s informaci\'f3n, consulta \par
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216). \par
+    \par
+    Example 1: Send output to a file\par
+    \par
+    PS C:\\>Get-Process | Out-File -filepath C:\\Test1\\process.txt\par
+    \par
+    This command sends a list of processes on the computer to the Process.txt file. If the file does not exist, Out-File creates it. Because the name of the FilePath \par
+    parameter is optional, you can omit it and submit the equivalent command `Get-Process | Outfile C:\\Test1\\process.txt`.\par
+    Example 2: Send output to a file without overwriting\par
+    \par
+    PS C:\\>Get-Process | Out-File C:\\Test1\\process.txt -NoClobber\par
+    \par
+    Out-File : File C:\\Test1\\process.txt already exists and NoClobber was specified.\par
+    At line:1 char:23\par
+    + Get-Process | Out-File  <<<< process.txt -NoClobber\par
+    \par
+    This command sends a list of processes to the Process.txt file, but it uses the NoClobber parameter, which prevents an existing file from being overwritten. The \par
+    output shows the error message that appears when NoClobber is used with an existing file.\par
+    Example 3: Send output to a file in ASCII format\par
+    \par
+    PS C:\\>$A = Get-Process\par
+    PS C:\\>Out-File -FilePath C:\\Test1\\process.txt -InputObject $A -Encoding ASCII -Width 50\par
+    \par
+    These commands send a list of processes on the computer to the Process.txt file. The text is encoded in ASCII format so that it can be read by search programs like \par
+    Findstr and Grep. By default, Out-File uses Unicode format.\par
+    \par
+    The first command gets the list of processes and stores them in the $A variable. The second command uses the Out-File cmdlet to send the list to the Process.txt \par
+    file.\par
+    \par
+    The command uses the InputObject parameter to specify that the input is in the $A variable. It uses the Encoding parameter to convert the output to ASCII format. \par
+    It uses the Width parameter to limit each line in the file to 50 characters. Because the lines of output are truncated at 50 characters, the rightmost column in \par
+    the process table is omitted.\par
+    Example 4: Send output from outside a file system drive\par
+    \par
+    PS C:\\>Set-Location hklm:\\software\par
+    PS C:\\>Get-Acl mycompany\\mykey | Out-File -FilePath c:\\ps\\acl.txt\par
+    PS C:\\>Get-Acl mycompany\\mykey | Out-File -FilePath filesystem::acl.txt\par
+    \par
+    These commands show how to use the Out-File cmdlet when you are not in a FileSystem drive.\par
+    \par
+    The first command sets the current location to the HKLM:\\Software registry key.\par
+    \par
+    The second and third commands have the same effect. They use the Get-Acl cmdlet to get the security descriptor of the MyKey registry subkey \par
+    (HKLM\\Software\\MyCompany\\MyKey). A pipeline operator passes the result to the Out-File cmdlet, which sends it to the Acl.txt file.\par
+    \par
+    Because Out-File is not supported by the Windows PowerShell Registry provider, you must specify either the file system drive name, such as c:, or the name of the \par
+    provider followed by two colons, FileSystem::, in the value of the FilePath parameter. The second and third commands demonstrate these methods.\par
+NOTAS\par
+    Para ver los ejemplos, escriba: "get-help Out-File -examples".\par
+    Para obtener m\'e1s informaci\'f3n, escriba: "get-help Out-File -detailed".\par
+    Para obtener informaci\'f3n t\'e9cnica, escriba: "get-help Out-File -full".\par
+    Para obtener ayuda disponible en l\'ednea, escriba: "get-help Out-File -online" \par
+\f0\fs22 R// 80.\par
+Tambien el que permite cambiar el tama\'f1o es Out-File -width 2000\par
+   11 Por omisi\'f3n, Out-File sobreescribe el archivo de salida, en caso de que exista. Existe alg\'fan par\'e1metro que impida la sobreescritura de un archivo existente?\par
+\f1  \fs18 PS C:\\Windows\\system32> Get-Process | Out-File procesos.txt \par
+\par
+PS C:\\Windows\\system32> Get-Service | Out-File procesos.txt \par
+\par
+PS C:\\Windows\\system32> Get-Process | Out-File procesos.txt \par
+\par
+PS C:\\Windows\\system32> Get-Service | Out-File procesos.txt -NoClobber\par
+Out-File : El archivo 'C:\\Windows\\system32\\procesos.txt' ya existe.\par
+En l\f2\'ednea: 1 Car\'e1cter: 15\par
++ Get-Service | Out-File procesos.txt -NoClobber\par
++               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\par
+    + CategoryInfo          : ResourceExists: (C:\\Windows\\system32\\procesos.txt:String) [Out-File], IOException\par
+    + FullyQualifiedErrorId : NoClobber,Microsoft.PowerShell.Commands.OutFileCommand\par
+\cf3   \par
+\cf0\f0\fs22 R// \f1\fs18 PS C:\\Windows\\system32> Get-Service | Out-File procesos.txt -NoClobber\par
+\f0\fs22\par
+}
+ 
